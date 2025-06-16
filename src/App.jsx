@@ -2,7 +2,8 @@ import CardDeal from './components/BetterCard.jsx'
 import Billing from './components/bills.jsx'
 import Business from './components/BussinesPart.jsx'
 import CTA from './components/Call_To_Action.jsx'
-import Clients from './components/clients.jsx'
+import Clients from './components/Clientss.jsx'
+
 import Footer from './components/Footer.jsx'
 import HeroSection from './components/HeroSection.jsx'
 import NavBar from './components/NavBar.jsx'
@@ -20,7 +21,7 @@ const App = () => {
        <CardDeal />
        <Testimonials />
        <Clients />
-       <CTA />
+       <CTA  />
        <Footer />
     </div>
 
