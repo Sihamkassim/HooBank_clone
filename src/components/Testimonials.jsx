@@ -3,29 +3,22 @@ import FeedbackCard from "./FeedBack";
 
 const Testimonials = () => (
   <section
-    id="clients"
-    className="py-16 flex justify-center items-center flex-col relative overflow-hidden"
+    id="testimonials"
+    className="py-20 sm:py-24 px-4 sm:px-6 md:px-10 lg:px-16 bg-primary text-white"
   >
-    {/* Background gradient bubble */}
-    <div className="hidden lg:block absolute z-0 w-[60%] h-[60%] -right-[25%] rounded-full blue__gradient bottom-40" />
-
-    {/* Header section */}
-    <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]">
-      <h2 className="font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full">
-        What People are <br className="sm:block hidden" /> saying about us
+    <div className="w-full flex flex-col justify-between items-center mb-10 sm:mb-16">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center leading-tight sm:leading-snug max-w-2xl">
+        What people are saying about us
       </h2>
-      <div className="w-full md:mt-0 mt-6">
-        <p className="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] text-left max-w-[450px]">
-          Everything you need to accept card payments and grow your business
-          anywhere on the planet.
-        </p>
-      </div>
+      <p className="mt-4 text-base sm:text-lg text-gray-400 text-center max-w-xl">
+        Everything you need to accept card payments and grow your business
+        anywhere on the planet.
+      </p>
     </div>
 
-    {/* Feedback cards */}
-    <div className="flex flex-wrap sm:justify-start justify-center w-full feedback-container relative z-[1]">
-      {feedback.map((card) => (
-        <FeedbackCard key={card.id} {...card} />
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {feedback.map((card, index) => (
+        <FeedbackCard key={index} {...card} />
       ))}
     </div>
   </section>
